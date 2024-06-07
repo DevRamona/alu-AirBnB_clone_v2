@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This is the file storage class for AirBnB"""
+"""the file storage class"""
 import json
 from models.base_model import BaseModel
 from models.user import User
@@ -9,7 +9,6 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 import shlex
-
 
 class FileStorage:
     """This class serializes instances to a JSON file and

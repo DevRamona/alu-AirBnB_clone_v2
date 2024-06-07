@@ -10,6 +10,7 @@ from models.city import City
 import os
 
 
+
 # skip these test if the storage is not db
 @unittest.skipIf(os.getenv('HBNB_TYPE_STORAGE') != 'db', "skip if not fs")
 class TestDBStorage(unittest.TestCase):

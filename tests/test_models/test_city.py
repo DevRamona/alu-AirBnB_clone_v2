@@ -26,3 +26,5 @@ class TestCity(TestBaseModel):
         new = self.value()
         new.name = "Batch"
         self.assertEqual(type(new.name), str)
+
+
