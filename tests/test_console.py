@@ -15,7 +15,6 @@ class ConsoleTestCase(unittest.TestCase):
         self.console = HBNBCommand()
         self.stdout = StringIO()
         self.storage = models.storage
-        
 
     def tearDown(self):
         del self.stdout
@@ -24,7 +23,7 @@ class ConsoleTestCase(unittest.TestCase):
     def test_create(self):
         """test create basic"""
         with patch('sys.stdout', self.stdout):
-            self.console.onecmd('create State name="California"')
+            self.console.onecmd('create State')
         state_id = self.stdout.getvalue()[:-1]
         # print(state_id)
         # print(len(state_id))

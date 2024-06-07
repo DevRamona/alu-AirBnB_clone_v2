@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-# script to delete out-of-date archives.
+""" Fabscript that deletes
+    out-of-date archives.
+"""
 import os
 from fabric.api import *
 
-env.hosts = ['54.144.99.106', '3.94.186.49']
+env.hosts = ["54.174.230.101", "100.26.57.164"]
 
 
 def do_clean(number=0):
@@ -24,5 +26,3 @@ def do_clean(number=0):
         archives = [a for a in archives if "web_static_" in a]
         [archives.pop() for i in range(number)]
         [run("rm -rf ./{}".format(a)) for a in archives]
-
-

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#web_static development
+#web static deploy
 
 sudo apt-get -y update
 sudo apt-get -y upgrade
@@ -11,5 +11,3 @@ sudo ln -s /data/web_static/releases/test/ /data/web_static/current
 sudo chown -R ubuntu:ubuntu /data/
 sudo sed -i '44i \\n\tlocation /hbnb_static {\n\t\talias /data/web_static/current/;\n\t}' /etc/nginx/sites-available/default
 sudo service nginx restart
-
-
